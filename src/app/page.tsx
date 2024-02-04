@@ -2,9 +2,7 @@ import { Projects } from "@/components/sections/projects";
 import { Work } from "@/components/sections/work";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Toggle } from "@/components/ui/toggle";
-import { Github, Instagram, Linkedin, Pin, Sun } from "lucide-react";
+import { Github, Instagram, Linkedin, Pin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
