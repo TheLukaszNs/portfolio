@@ -1,9 +1,10 @@
 import { Projects } from "@/components/sections/projects";
 import { Work } from "@/components/sections/work";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Toggle } from "@/components/ui/toggle";
-import { Pin, Sun } from "lucide-react";
+import { Github, Instagram, Linkedin, Pin, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,7 +44,7 @@ export default function Home() {
             Łukasz Myśliwiec
             <br />
           </h1>
-          <div className="mt-4 text-lg">
+          <div className="mt-4">
             I create things for{" "}
             <div className="inline-block text-cyan-400 bg-stone-100 dark:bg-stone-900 mx-1 px-2 py-1 rounded-md font-mono font-bold">
               web
@@ -56,6 +57,29 @@ export default function Home() {
           <div className="flex flex-row items-center gap-2">
             <Pin className="w-4 h-4" />
             <span>Gliwice, Poland</span>
+          </div>
+          <div className="text-stone-200 flex flex-row gap-4 mt-2">
+            <Button variant="outline" size="icon" asChild>
+              <Link
+                href="https://www.linkedin.com/in/lukasz-mysliwiec/"
+                target="_blank"
+              >
+                <Linkedin className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <Link
+                href="https://www.instagram.com/thelukaszns2/"
+                target="_blank"
+              >
+                <Instagram className="h-4 w-4" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="icon" asChild>
+              <Link href="https://www.github.com/thelukaszns" target="_blank">
+                <Github className="h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
 

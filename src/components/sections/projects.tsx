@@ -1,5 +1,7 @@
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
+import { Card } from "../ui/card";
+import { Github } from "lucide-react";
 
 export const Projects = () => {
   return (
@@ -24,6 +26,14 @@ export const Projects = () => {
         description="modo is a simple, yet powerful, multiplatform movie todo app for mobile devices"
         href="https://github.com/TheLukaszNs/modo"
       />
+
+      <Link
+        href="https://github.com/TheLukaszNs"
+        target="_blank"
+        className="flex flex-row gap-2 self-center dark:text-stone-600 dark:hover:text-stone-200 transition-colors duration-200 text-stone-400 hover:text-stone-800 items-center text-sm"
+      >
+        more on github <Github />
+      </Link>
     </section>
   );
 };
@@ -38,13 +48,11 @@ const Item = ({
   href: Url;
 }) => {
   return (
-    <Link
-      className="dark:shadow-black shadow-none hover:shadow-xl hover:shadow-stone-100 flex flex-col gap-4 p-4 border border-accent rounded-lg transition-shadow duration-200"
-      href={href}
-      target="_blank"
-    >
-      <span className="text-2xl font-bold">{title}</span>
-      <span className="text-sm">{description}</span>
+    <Link href={href} target="_blank">
+      <Card className="dark:shadow-black shadow-none hover:shadow-2xl hover:shadow-stone-100 transition-shadow duration-200">
+        <span className="text-2xl font-bold">{title}</span>
+        <span className="text-sm">{description}</span>
+      </Card>
     </Link>
   );
 };
