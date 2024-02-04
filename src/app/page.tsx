@@ -1,10 +1,16 @@
+import { Projects } from "@/components/sections/projects";
+import { Work } from "@/components/sections/work";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Switch } from "@/components/ui/switch";
+import { Toggle } from "@/components/ui/toggle";
+import { Pin, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between px-48 py-24">
-      <nav className="flex flex-row items-center gap-2 font-mono">
+    <main className="flex min-h-screen flex-col py-24 mx-12 md:mx-auto md:w-2/3 xl:w-1/2">
+      <nav className="flex flex-row items-center gap-4 font-mono">
         <Link href="/" className="text-lg relative">
           {/* <div className="absolute z-[-2] -left-10 top-10 h-8 bg-cyan-600 w-32 blur-[128px]" /> */}
           <svg
@@ -20,30 +26,52 @@ export default function Home() {
           </svg>
           mysliwiec.
         </Link>
-        <ul className="flex flex-row gap-8 text-stone-400 px-16 py-3 border rounded-full border-stone-700 mx-auto">
-          <li className="text-stone-200 font-bold">home</li>
+        <ul className="flex flex-row gap-12 text-stone-400 px-16 h-12 items-center border rounded-full border-accent ml-auto print:hidden">
+          <li className="dark:text-stone-200 text-stone-600 font-bold">
+            portfolio
+          </li>
           <li>resume</li>
           <li>blog</li>
         </ul>
-        <div className="w-16 h-8 bg-stone-950 rounded-full border border-stone-800"></div>
+
+        <ThemeToggle />
       </nav>
 
-      <div className="flex-1 flex flex-col justify-center">
-        <h1 className="font-mono text-5xl font-black">
-          Łukasz Myśliwiec
-          <br />
-        </h1>
-        <div className="mt-4 text-lg">
-          I create things for the{" "}
-          <div className="inline-block text-cyan-400 bg-stone-900 mx-1 px-2 py-1 rounded-md font-mono font-bold">
-            web
-          </div>{" "}
-          and{" "}
-          <div className="inline-block text-cyan-400 bg-stone-900 ml-1 px-2 py-1 rounded-md font-mono font-bold">
-            mobile
+      <div className="flex flex-row items-center mt-48 justify-between font-mono">
+        <div className="flex flex-col justify-center gap-2">
+          <h1 className="text-3xl font-black">
+            Łukasz Myśliwiec
+            <br />
+          </h1>
+          <div className="mt-4 text-lg">
+            I create things for{" "}
+            <div className="inline-block text-cyan-400 bg-stone-100 dark:bg-stone-900 mx-1 px-2 py-1 rounded-md font-mono font-bold">
+              web
+            </div>{" "}
+            and{" "}
+            <div className="inline-block text-cyan-400 bg-stone-100 dark:bg-stone-900 ml-1 px-2 py-1 rounded-md font-mono font-bold">
+              mobile
+            </div>
+          </div>
+          <div className="flex flex-row items-center gap-2">
+            <Pin className="w-4 h-4" />
+            <span>Gliwice, Poland</span>
           </div>
         </div>
+
+        <Image
+          className="rounded-xl shadow-2xl shadow-stone-400 dark:shadow-black"
+          src="/me.JPG"
+          width={200}
+          height={200}
+          alt="Hey, it's me"
+          priority
+        />
       </div>
+
+      <Projects />
+
+      <Work />
     </main>
   );
 }
