@@ -10,10 +10,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col py-24 mx-12 md:mx-auto md:w-2/3 xl:w-1/2">
+    <main className="flex min-h-screen flex-col py-24 mx-12 md:mx-auto md:w-4/5 lg:w-2/3 xl:w-1/2">
       <nav className="flex flex-row items-center gap-4 font-mono">
-        <Link href="/" className="text-lg relative">
-          {/* <div className="absolute z-[-2] -left-10 top-10 h-8 bg-cyan-600 w-32 blur-[128px]" /> */}
+        <Link href="/" className="text-2xl md:text-lg relative mx-auto md:mx-0">
           <svg
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +26,7 @@ export default function Home() {
           </svg>
           mysliwiec.
         </Link>
-        <ul className="flex flex-row gap-12 text-stone-400 px-16 h-12 items-center border rounded-full border-accent ml-auto print:hidden">
+        <ul className="md:flex flex-row gap-12 text-stone-400 px-16 h-12 items-center border rounded-full border-accent ml-auto hidden">
           <li className="dark:text-stone-200 text-stone-600 font-bold">
             portfolio
           </li>
@@ -38,7 +37,7 @@ export default function Home() {
         <ThemeToggle />
       </nav>
 
-      <div className="flex flex-row items-center mt-48 justify-between font-mono">
+      <div className="flex flex-col-reverse gap-8 sm:flex-row md:items-center mt-48 justify-between font-mono">
         <div className="flex flex-col justify-center gap-2">
           <h1 className="text-3xl font-black">
             Łukasz Myśliwiec
@@ -58,7 +57,7 @@ export default function Home() {
             <Pin className="w-4 h-4" />
             <span>Gliwice, Poland</span>
           </div>
-          <div className="text-stone-200 flex flex-row gap-4 mt-2">
+          <div className=" flex flex-row gap-4 mt-2">
             <Button variant="outline" size="icon" asChild>
               <Link
                 href="https://www.linkedin.com/in/lukasz-mysliwiec/"
@@ -84,7 +83,7 @@ export default function Home() {
         </div>
 
         <Image
-          className="rounded-xl shadow-2xl shadow-stone-400 dark:shadow-black"
+          className="rounded-xl shadow-2xl shadow-stone-400 dark:shadow-black w-[100px] aspect-square sm:w-[200px]"
           src="/me.JPG"
           width={200}
           height={200}

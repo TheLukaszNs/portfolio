@@ -9,7 +9,7 @@ export const ThemeToggle = () => {
 
   return (
     <Toggle
-      className="w-12 h-12 rounded-xl group print:hidden"
+      className="w-12 h-12 rounded-xl group hidden md:flex"
       pressed={theme === "light"}
       onPressedChange={() => {
         setTheme(theme === "dark" ? "light" : "dark");
