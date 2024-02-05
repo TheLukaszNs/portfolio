@@ -1,4 +1,5 @@
 import { Projects } from "@/components/sections/projects";
+import { Skills } from "@/components/sections/skills";
 import { Work } from "@/components/sections/work";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -91,8 +92,8 @@ export default function Home() {
       </div>
 
       <Projects />
-
       <Work />
+      <Skills />
     </main>
   );
 }
