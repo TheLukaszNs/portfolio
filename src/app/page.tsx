@@ -27,16 +27,20 @@ export default function Home() {
         </Link>
         <ul className="md:flex flex-row gap-12 text-stone-400 px-16 h-12 items-center border rounded-full border-accent ml-auto hidden">
           <li className="dark:text-stone-200 text-stone-600 font-bold">
-            portfolio
+            <Link href="/">portfolio</Link>
           </li>
-          <li>resume</li>
-          <li>blog</li>
+          <li className="dark:text-stone-200 text-stone-600 font-bold">
+            <Link href="/files/resume.pdf" target="_blank" download>
+              resume
+            </Link>
+          </li>
+          <li className="line-through">blog</li>
         </ul>
 
         <ThemeToggle />
       </nav>
 
-      <div className="flex flex-col-reverse gap-8 sm:flex-row md:items-center mt-48 justify-between font-mono">
+      <div className="flex flex-col-reverse gap-8 sm:flex-row sm:items-center mt-48 justify-between font-mono">
         <div className="flex flex-col justify-center gap-2">
           <h1 className="text-3xl font-black">
             Łukasz Myśliwiec
