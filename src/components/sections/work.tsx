@@ -6,9 +6,14 @@ export const Work = () => {
   return (
     <section className="flex flex-col justify-center mt-24 font-mono gap-4">
       <h1 className="text-3xl font-black mb-4">Work</h1>
+      <Item company="MindPal" time="May 2024 - Present" title="React Developer">
+        worked on a solar energy project for an international client in the
+        renewable energy sector. the project consisted of multiple web
+        applications built with react and ember.
+      </Item>
       <Item
         company="Helfio"
-        time="December 2021 - Present"
+        time="December 2021 - March 2024"
         title="React Native Developer"
       >
         created a beautiful, award-winning mobile application focused on
